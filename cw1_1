@@ -1,0 +1,10 @@
+class Main {
+    public static void main(String[] args) {
+        String a = "1";
+        String b = "2";
+        int t = Integer.parseInt(a);
+        double c = Double.parseDouble(b);
+        double x = a + b;
+        System.out.println(x);
+    }
+    
