@@ -1,0 +1,31 @@
+class Main {
+
+static class NetworkInfo {
+int securityType;
+String ssid, passwd;
+
+public void showParameters(){
+System.out.print("securityType:");System.out.println(securityType);
+System.out.print("ssid:");System.out.println(ssid);
+System.out.print("passwd:");System.out.println(passwd);
+}
+}
+public static NetworkInfo generateWithParameters(
+int securityType,
+String ssid,
+String passwd
+)
+{
+NetworkInfo tmp = new NetworkInfo();
+tmp.securityType = securityType;
+tmp.ssid = ssid;
+tmp.passwd = passwd;
+return tmp;
+}
+
+public static void main(String[] args) {
+NetworkInfo networkInfo = generateWithParameters(1,"10","passwd");
+networkInfo.showParameters();
+
+}
+}
