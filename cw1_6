@@ -1,0 +1,22 @@
+class Main {
+public static void main(String[] args) {
+int size = 4;
+int[] src = new int[size];
+int[] cmp = new int[size];
+int[] result = new int[size];//изначально в массиве нули
+src[0] = 1; src[1] = 2; src[2] = 1; src[3] = 1;
+cmp[0] = 1; cmp[1] = 1; cmp[2] = 1; cmp[3] = 2;
+for(int i = 0; i<size; i++){
+if(src[i]!=cmp[i]){
+//если не совпали, то на место нуля в массиве резалт - единица
+result[i] = 1;
+}
+}
+for(int i = 0; i<size; i++){
+if (result[i] == 1){
+System.out.println(i);
+}
+}
+
+}
+}
