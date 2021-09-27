@@ -1,0 +1,32 @@
+import java.util.*;
+import mypack.MathUtils;
+class Main {
+public static void main(String[] args) {
+Scanner in = new Scanner(System.in);
+//вводим две цифры
+System.out.println("Ввод:");
+int a = in.nextInt();
+int b = in.nextInt();
+// сумма
+System.out.println("сумма:");
+System.out.println(MathUtils.plus(a,b));
+// разница
+System.out.println("разница:");
+System.out.println(MathUtils.minus(a,b));
+// произведение
+System.out.println("произведение:");
+System.out.println(MathUtils.proizvedenie(a,b));
+// деление
+System.out.println("деление:");
+
+System.out.println(MathUtils.delenie(a,b));
+// степень - а^b
+System.out.println("степень:");
+
+System.out.println(MathUtils.power(a,b));
+// факториал
+System.out.println("факториал:");
+
+System.out.println(MathUtils.factorial(a));
+}
+}
