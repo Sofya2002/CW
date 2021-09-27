@@ -1,0 +1,49 @@
+import java.util.*;
+class Main {
+//задаем массив вводом с клавиатуры
+public static void main(String[] args) {
+int size = 15;
+char [] arrayBig = new char[size];
+Scanner in = new Scanner(System.in);
+for(int i = 0; i<size; i++){
+//in.next() считывает строку всю, но мы вводим посимвольно, поэтому charAt(0) - символ на 0 позиции
+arrayBig[i] = in.next().charAt(0);
+}
+//вывод в одну строку
+for(int i = 0; i<size; i++){
+System.out.print(arrayBig[i]);
+}
+//новая строка
+System.out.println();
+
+//сортировка пузырьком
+for(int i = 0; i<size; i++){
+for(int j = 0; j<size-1; j++){
+if (arrayBig[j]>arrayBig[j+1]){
+char tmp = arrayBig[j];
+arrayBig[j] = arrayBig[j+1];
+arrayBig[j+1] = tmp;
+}
+}
+}
+//вывод в одну строку
+for(int i = 0; i<size; i++){
+System.out.print(arrayBig[i]);
+}
+//центр 15 - 8 элемент, надо взять 2 справа и 2 слева(средние 5 эл-ов)
+int mid = size/2+1;
+char [] arraySmall = new char[5];
+//нулевой элемент малого массива равен эл-ту по индексу на два раньше середины -> arrSMALL[0] = arrayBig[mid(7)-2]
+//arrSMALL[1] = arrayBig[7-2+1]
+//arrSMALL[2] = arrayBig[7-2+2]
+for(int i = 0; i<5;i++){
+arraySmall[i] = arrayBig[mid-1+i];
+}
+//новая строка
+System.out.println();
+//вывод в одну строку маленького массива
+for(int i = 0; i<5; i++){
+System.out.print(arraySmall[i]);
+}
+}
+}
