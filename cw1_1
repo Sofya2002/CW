@@ -1,10 +1,17 @@
-class Main {
-    public static void main(String[] args) {
-        String a = "1";
-        String b = "2";
-        int t = Integer.parseInt(a);
-        double c = Double.parseDouble(b);
-        double x = a + b;
-        System.out.println(x);
-    }
-    
+
+    class Main {
+static int stoi(String s){//string to int
+return Integer.parseInt(s);
+}
+static double stod(String s){//string to double
+return Double.parseDouble(s);
+}
+public static void main(String[] args) {
+String s1 = "10", s2 = "12.9";
+int n1 = stoi(s1);
+double n2 = stod(s2);
+int n3 = n1 + (int)n2;
+System.out.println(n3);
+}
+}
+
