@@ -1,0 +1,28 @@
+package MyPack;
+public class Cylinder {
+public double square() {
+return 0;
+}
+public double volume() {
+return 0;
+}
+public double square(double r, double h) {
+return Math.PI*r*r*h;
+}
+public double square(String s_r, String s_h) {
+
+double r = Double.parseDouble(s_r);
+double h = Double.parseDouble(s_h);
+return Math.PI*r*r*h;
+}
+
+public double volume(double r, double h) {
+return 2*Math.PI*r * (r+h);
+}
+public double volume(String s_r, String s_h) {
+
+double r = Double.parseDouble(s_r);
+double h = Double.parseDouble(s_h);
+return 2*Math.PI*r * (r+h);
+}
+}
