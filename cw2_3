@@ -1,0 +1,10 @@
+package MyPack;
+public class A {
+public int count(int a, int b){
+return a+b;
+}
+public void show(){
+System.out.println("A");
+}
+
+}
