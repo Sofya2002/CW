@@ -1,0 +1,38 @@
+import MyPack.Roots;
+import java.util.*;
+
+class Main {
+public static Roots getRoots(){
+double secondRoot = 0, firstRoot = 0;
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter the value of a ::");
+double a = sc.nextDouble();
+
+System.out.println("Enter the value of b ::");
+double b = sc.nextDouble();
+
+System.out.println("Enter the value of c ::");
+double c = sc.nextDouble();
+
+double determinant = (b*b)-(4*a*c);
+double sqrt = Math.sqrt(determinant);
+
+int count_of_roots = 0;
+if(determinant>0){
+firstRoot = (-b + sqrt)/(2*a);
+secondRoot = (-b - sqrt)/(2*a);
+count_of_roots = 2;
+}
+else if (determinant==0){
+firstRoot = (-b)/(2*a);
+secondRoot = (-b)/(2*a);
+count_of_roots = 1;
+}
+Roots roots = new Roots(firstRoot, secondRoot, count_of_roots);
+return roots;
+}
+public static void main(String[] args) {
+Roots roots = getRoots();
+roots.print();
+}
+}
