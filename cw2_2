@@ -1,0 +1,40 @@
+package MyPack;
+public class Circle {
+int x,y,r;
+
+public Circle(int x, int y, int r){
+this.x = x;
+this.y = y;
+this.r = r;
+}
+
+public void print() {
+System.out.print("x = ");
+System.out.println(x);
+System.out.print("y = ");
+System.out.println(y);
+System.out.print("r = ");
+System.out.println(r);
+}
+public void move(int x, int y){
+this.x = x;
+this.y = y;
+}
+public double distToOtherCircle(Circle other_circle){
+//Theorem of Piphagor
+return Math.sqrt(
+Math.pow((this.x-other_circle.x),2)// x^2
++
+Math.pow((this.y-other_circle.y),2)// y^2
+);
+}
+public void changeRadius(int r){
+this.r = r;
+}
+public double getPerimetr(){
+return 2*Math.PI*r;
+}
+public double getSquare(){
+return Math.PI*r*r;
+}
+}
